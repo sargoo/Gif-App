@@ -22,7 +22,7 @@ export const useFetchGif = (category) =>{
         {
             gifs,
             loading,
-            setGifs,
+            setGifs
         }
     );
 }

@@ -12,7 +12,7 @@ export const getGifs = async (category) => {
         id: gif.id,
         title: gif.title,
         url: gif.images.original.url,
-        category: category
+        category: category,
         }
     ));
     return gifs;

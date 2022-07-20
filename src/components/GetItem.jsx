@@ -1,11 +1,11 @@
-import { ReactPropTypes } from 'prop-types';
+import PropTypes  from 'prop-types';
 
 export const GetItem = ({url, title, id, handleFilterGif}) =>{
 
     return (
         <div className="card">
             <img src={url} alt="gif"></img>
-            <p> {title}</p>
+            <p data-testid = 'test-title'> {title}</p>
             <div className="boton">
                 <button onClick={handleFilterGif} id={id}> Quitar gif</button>
             </div>
@@ -13,7 +13,7 @@ export const GetItem = ({url, title, id, handleFilterGif}) =>{
     );
 }
 
-GifItem.propTypes = {
-    title: ProTypes.string.isRequired,
+GetItem.propTypes = {
+    title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
 }

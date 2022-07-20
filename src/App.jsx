@@ -5,7 +5,7 @@ import { ResetCategories } from './components/ResetCategories';
 
 
 
-const  App = ()  => {
+export const App = ()  => {
 
   const [categories, setCategories] = useState ([]);
   const HandleAddCategory = (value) =>{
@@ -15,21 +15,18 @@ const  App = ()  => {
   const handleReset = (e) => (
     setCategories(categories.filter(category => category.categories === e.target.id))
     );
-
-
-
-
+    
   return (
     <>
       <h1> GIF APP!</h1>
       <ResetCategories  handleReset={handleReset} categories={categories}/> 
       <AddCategory  addCategory = {HandleAddCategory}/>
       {
-        categories.map(   cat => ( <GifGrid  key= {cat} category = {cat}/> ))
+        categories.map( cat => ( <GifGrid  key= {cat} category = {cat}/> ))
       }
       
     </>
   );
 }
 
-export default App
+
